@@ -6,8 +6,8 @@ function main(): void
 {
     $input = read("input.txt");
 
-    $input = [3,3,3,3,3,1,3];
-    print_r(group_the_peolpe($input));
+    $input = "aabcc";
+    print_r(min_delete($input));
 //    write("answer.text", solution($input));
 }
 

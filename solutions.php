@@ -87,3 +87,27 @@ function group_the_peolpe(array $groupSizes): array
     });
     return $answer;
 }
+
+function min_delete(string $s): int
+{
+    $answer = 0;
+    $count = [];
+    for ($i = 0; $i < strlen($s); $i++) {
+        $count[$s[$i]]++;
+    }
+
+    $used = [];
+
+    foreach ($count as $freq) {
+        while ($freq > 0 && isset($used[$freq])) {
+            $freq--;
+            $answer++;
+        }
+
+        if ($freq > 0) {
+            $used[$freq] = true;
+        }
+    }
+
+    return $answer;
+}
