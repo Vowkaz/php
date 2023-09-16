@@ -93,6 +93,9 @@ function min_delete(string $s): int
     $answer = 0;
     $count = [];
     for ($i = 0; $i < strlen($s); $i++) {
+        if (!isset($count[$s[$i]])) {
+            $count[$s[$i]] = 0;
+        }
         $count[$s[$i]]++;
     }
 

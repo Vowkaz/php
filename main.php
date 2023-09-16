@@ -4,7 +4,7 @@ include 'solutions.php';
 
 function main(): void
 {
-    $input = read("input.txt");
+//    $input = read("input.txt");
 
     $input = "aabcc";
     print_r(min_delete($input));
